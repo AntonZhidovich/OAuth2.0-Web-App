@@ -8,21 +8,79 @@
 	<meta charset="utf-8" />
 	</head>
 	<style>
-		.buttons{
+	.buttons{
 			text-align: center;
 			display: flex;
+			justify-content: center;
+			margin: 0 auto
+	}
+	section{
+	position:absolute;
+	top: 50%;
+    left: 50%;
+	margin-right: -50%;
+    transform: translate(-50%, -50%)
+	}
 
-		}
+	.btnLog{
+	  text-decoration: none;
+	  display: inline-block;
+	  width: 140px;
+	  height: 45px;
+	  line-height: 10px;
+	  border-radius: 45px;
+	  margin: 10px 20px;
+	  font-family: 'Montserrat', sans-serif;
+	  font-size: 11px;
+	  text-transform: uppercase;
+	  text-align: center;
+	  letter-spacing: 3px;
+	  font-weight: 600;
+	  color: black;
+	  background: white;
+	  transition: .3s;
+	}
+	.btnLog:hover {
+	    background: #2EE59D;
+		color: white;
+		transform: translateY(-7px);
+	}
+	.btnProf{
+	  text-decoration: none;
+	  display: inline-block;
+	  width: 140px;
+	  height: 45px;
+	  line-height: 10px;
+	  border-radius: 45px;
+	  margin: 10px 20px;
+	  font-family: 'Montserrat', sans-serif;
+	  font-size: 11px;
+	  text-transform: uppercase;
+	  text-align: center;
+	  letter-spacing: 3px;
+	  font-weight: 600;
+	  color: black;
+	  background: white;
+	  transition: .3s;
+	}
+	.btnProf:hover {
+	    background: #2EE59D;
+		color: white;
+		transform: translateY(-7px);
+	}
 	</style>
-	<body>
+	<body style =" height:1000px">
 	<h1>It's a main page!</h1>
-	<div class="buttons">
+
+	<section>
+	<div class="buttons" style="display:flex;justify-content:center;align-items:center;">
 		<form method="get" action="~/Account/Login">
-			<input class="btnLog btn-1" type="submit" value="Log in" />
+			<input class="btnLog" align = "center" type="submit" value="Log in" />
 	</form>
 	<form method="get" action="~/Home/Index">
-			<input class="btnProf btn-2" type="submit" value="Profile" />
+			<input class="btnProf" type="submit" value="Profile" />
 	</form>
 	</div>
+	</section>
 	</body>
 </html>

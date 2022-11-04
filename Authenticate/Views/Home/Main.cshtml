@@ -3,84 +3,21 @@
 }
 
 <!doctype html>
-<html>
-	<head><title>Main page</title>
+<head>
+	<title>Main page</title>
 	<meta charset="utf-8" />
-	<link  rel="stylesheet" href="~/Views/Home/main.css" asp-append-version="true"/>
-	</head>
-	<style>
-	.buttons {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto
-}
-
-section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.btnLog {
-    text-decoration: none;
-    display: inline-block;
-    width: 140px;
-    height: 45px;
-    line-height: 10px;
-    border-radius: 45px;
-    margin: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    font-weight: 600;
-    color: black;
-    background: rgb(240, 240, 240);
-    transition: .3s;
-}
-
-    .btnLog:hover {
-        background: #0f9d58;
-        color: white;
-        transform: translateY(-7px);
-    }
-
-.btnProf {
-    text-decoration: none;
-    display: inline-block;
-    width: 140px;
-    height: 45px;
-    line-height: 10px;
-    border-radius: 45px;
-    margin: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    font-weight: 600;
-    color: black;
-    background: rgb(240, 240, 240);
-    transition: .3s;
-}
-
-    .btnProf:hover {
-        background: #f4b400;
-        color: white;
-        transform: translateY(-7px);
-    }
-	</style>
-	<body style =" height:1000px">
+	<link rel="stylesheet" type="text/css" href="~/css/main.css">
+</head>
+<html>
+	
+	
+	<body>
 
 	<section>
-	<h1 style="font-family: 'Montserrat', sans-serif; margin: 0 0 20px 70px; font-size: 28px">It's a main page!</h1>
-	<div class="buttons" style="display:flex;justify-content:center;align-items:center;">
+	<h1>It's a main page!</h1>
+	<div class="buttons">
 		<form method="get" action="~/Account/Login">
-			<input class="btnLog" align = "center" type="submit" value="Log in" />
+			<input class="btnLog" type="submit" value="Log in" />
 	</form>
 	<form method="get" action="~/Home/Index">
 			<input class="btnProf" type="submit" value="Profile" />

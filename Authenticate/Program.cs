@@ -23,12 +23,15 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=home}/{action=main}/{id?}"
-    ); 
+    );
+
 
 app.Run();

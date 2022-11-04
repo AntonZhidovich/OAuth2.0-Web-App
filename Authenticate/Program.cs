@@ -29,6 +29,7 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 var app = builder.Build();
 
 app.UseStaticFiles();
+app.UseForwardedHeaders();
 
 app.UseAuthentication();
 app.UseAuthorization();

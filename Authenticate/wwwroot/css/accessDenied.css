@@ -32,7 +32,7 @@ section {
         transform: translateY(-7px);
     }
 h1 {
-    font-family: 'Montserrat', sans-serif; font-size: 28px;
+    font-family: 'Montserrat', sans-serif, Arial; font-size: 28px;
 }
 .btnLog {
     display:flex;justify-content:center;align-items:center;

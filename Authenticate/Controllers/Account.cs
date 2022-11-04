@@ -13,7 +13,7 @@ namespace Authenticate.Controllers
         private static Role adminRole = new Role("Admin");
         private static Role userRole = new Role("User");
 
-        private IEnumerable<Person> people = new List<Person>
+        private static IEnumerable<Person> people = new List<Person>
         {
             new Person("tom@gmail.com", "12345", userRole),
             new Person("bob@gmail.com", "55555", userRole),

@@ -1,0 +1,38 @@
+﻿body {
+}
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.btnLogOut {
+    text-decoration: none;
+    display: inline-block;
+    width: 160px;
+    height: 65px;
+    line-height: 10px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: rgb(240, 240, 240);
+    transition: .3s;
+}
+
+    .btnLogOut:hover {
+        background: #4285f4;
+        color: white;
+        transform: translateY(-7px);
+    }
+.btn {
+    display: flex; 
+    justify-content: center;
+}

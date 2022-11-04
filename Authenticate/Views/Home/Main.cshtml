@@ -7,13 +7,22 @@
 	<head><title>Main page</title>
 	<meta charset="utf-8" />
 	</head>
+	<style>
+		.buttons{
+			text-align: center;
+			display: flex;
+
+		}
+	</style>
 	<body>
 	<h1>It's a main page!</h1>
-	<form method="get" action="~/Account/Login">
-			<input class="btn btn-1" type="submit" value="Log in" />
+	<div class="buttons">
+		<form method="get" action="~/Account/Login">
+			<input class="btnLog btn-1" type="submit" value="Log in" />
 	</form>
 	<form method="get" action="~/Home/Index">
-			<input class="btn btn-1" type="submit" value="Profile" />
+			<input class="btnProf btn-2" type="submit" value="Profile" />
 	</form>
+	</div>
 	</body>
 </html>

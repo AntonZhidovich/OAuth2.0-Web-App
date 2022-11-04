@@ -1,0 +1,87 @@
+﻿
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+h1 {
+    font-size:24px;
+    margin-left:80px;
+    font-family:'Montserrat', sans-serif;
+}
+.pass {
+    margin-left: 20px;
+    width: 230px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.em {
+    margin-left: 47px;
+    width: 230px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btnSignIn {
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 10px;
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: rgb(240, 240, 240);
+    transition: .3s;
+}
+
+    .btnSignIn:hover {
+        background: #34a853;
+        color: white;
+        transform: translateY(-7px);
+    }
+
+.btnLogGoogle {
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 10px;
+    margin-top: 15px;
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: black;
+    background: rgb(240, 240, 240);
+    transition: .3s;
+}
+
+    .btnLogGoogle:hover {
+        background: #fbbc05;
+        color: white;
+        transform: translateY(-7px);
+    }
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.legend {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+

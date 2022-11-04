@@ -7,10 +7,44 @@
 	<head><title>Main page</title>
 	<meta charset="utf-8" />
 	</head>
+	<style>
+	section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 10px;
+    border-radius: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: rgb(240, 240, 240);
+    transition: .3s;
+}
+
+    .btn:hover {
+        background: #db4437;
+        color: white;
+        transform: translateY(-7px);
+    }
+	</style>
 	<body>
-	<h1>Your access is denied!</h1>
+	<section>
+	<h1 style="font-family: 'Montserrat', sans-serif; font-size: 28px">Your access is denied!</h1>
 	<form method="get" action="~/Account/logout">
-			<input class="btn btn-1" type="submit" value="Log out" />
+			<div style="display:flex;justify-content:center;align-items:center;"><input class="btn" type="submit" value="Log out" /></div>
 		</form>
+	</section>
 	</body>
 </html>

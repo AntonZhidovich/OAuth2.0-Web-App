@@ -1,15 +1,6 @@
-﻿@{
-	Layout = null;
+﻿body {
 }
-
-<!doctype html>
-<html>
-	<head><title>Main page</title>
-	<meta charset="utf-8" />
-	<link  rel="stylesheet" href="~/Views/Home/main.css" asp-append-version="true"/>
-	</head>
-	<style>
-	.buttons {
+.buttons {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -73,19 +64,3 @@ section {
         color: white;
         transform: translateY(-7px);
     }
-	</style>
-	<body style =" height:1000px">
-
-	<section>
-	<h1 style="font-family: 'Montserrat', sans-serif; margin: 0 0 20px 70px; font-size: 28px">It's a main page!</h1>
-	<div class="buttons" style="display:flex;justify-content:center;align-items:center;">
-		<form method="get" action="~/Account/Login">
-			<input class="btnLog" align = "center" type="submit" value="Log in" />
-	</form>
-	<form method="get" action="~/Home/Index">
-			<input class="btnProf" type="submit" value="Profile" />
-	</form>
-	</div>
-	</section>
-	</body>
-</html>

@@ -7,8 +7,9 @@ namespace Authenticate.Controllers
     [Route("Home")]
     public class HomeController : Controller
     {
-        [Authorize(Roles = "Admin")]
+        
         [Route("Index")]
+        [Authorize]
         public IActionResult Index()
         {
             return View("Index", User);
@@ -25,6 +26,9 @@ namespace Authenticate.Controllers
         {
             return View("AccessDenied");
         }
-        
+
+        [Authorize(Roles = "Admin"), Route("AdminPage")]
+        public IActionResult AdminPage() => View();
+
     }
 }

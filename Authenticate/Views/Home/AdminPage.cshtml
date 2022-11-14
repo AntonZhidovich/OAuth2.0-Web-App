@@ -18,9 +18,9 @@
 	@if(Model is not null){
 		<h2>Hi, @Model.Identity.Name </h2>
 	}
+	<h3>It is a page for admins.</h3>
 	<p>
-		You successfully logged in with @Model.Identity.AuthenticationType.<br />
-		You are a @Model.FindFirst(ClaimTypes.Role).Value <br/>
+		<img src = "https://avatarko.ru/img/kartinka/18/zhivotnye_sobaka_computer_17767.jpg" />
 	</p>
 		<form method="get" action="~/Account/logout">
 			<div class = "btn">

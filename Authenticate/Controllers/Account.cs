@@ -12,13 +12,14 @@ namespace Authenticate.Controllers
     {
         private static Role adminRole = new Role("Admin");
         private static Role userRole = new Role("User");
+        private static Role demoUserRole = new Role("DemoUser");
 
         private static IEnumerable<Person> people = new List<Person>
         {
             new Person("tom@gmail.com", "12345", userRole),
             new Person("bob@gmail.com", "55555", userRole),
             new Person("anton.zhidovich@gmail.com", "7777", adminRole),
-            new Person("alexlubenko172@gmail.com", "1313", userRole)
+            new Person("0alexlubenko172@gmail.com", "1313", userRole)
         };
 
         [HttpGet, Route("login")]
@@ -70,15 +71,13 @@ namespace Authenticate.Controllers
             var emailClaim = User.FindFirstValue(ClaimTypes.Email);
             var email = emailClaim ?? "";
             Person? res = people.FirstOrDefault(p => p.Email == email);
-            if (res is null)
-            {
-                return Content("User doesn't exist.");
-            }
+
+            Role role = res is not null ? res.Role : demoUserRole;
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, res.Email) ,
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, res.Role.Name)
+                new Claim(ClaimsIdentity.DefaultNameClaimType, email) ,
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, role.Name)
             };
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Google");
             await HttpContext.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity));
